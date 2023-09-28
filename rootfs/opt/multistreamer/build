@@ -33,6 +33,7 @@ apk add --no-cache \
     libressl2.6-libcrypto \
     ca-certificates \
     postgresql-client \
+    nano \
     zlib
 
 mkdir /tmp/openresty-build
@@ -82,12 +83,10 @@ adduser -h /home/multistreamer -g multistreamer -s /sbin/nologin -S -D multistre
 
 cd /home/multistreamer
 
-curl -R -L -o multistreamer-$MULTISTREAMER_VER.tar.gz \
-    https://github.com/jprjr/multistreamer/archive/$MULTISTREAMER_VER.tar.gz
-tar xzf multistreamer-$MULTISTREAMER_VER.tar.gz
+git clone --testing https://github.com/republicus/multistreamer
 
-mv multistreamer-$MULTISTREAMER_VER/* .
-rm -rf multistreamer-$MULTISTREAMER_VER
+mv multistreamer/* .
+rm -rf multistreamer/
 
 /opt/luarocks/bin/luarocks --tree lua_modules install lua-resty-exec $LUA_LUA_RESTY_EXEC_VER
 /opt/luarocks/bin/luarocks --tree lua_modules install lua-resty-jit-uuid $LUA_LUA_RESTY_JIT_UUID_VER
