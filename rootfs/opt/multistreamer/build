@@ -83,7 +83,7 @@ adduser -h /home/multistreamer -g multistreamer -s /sbin/nologin -S -D multistre
 
 cd /home/multistreamer
 
-git clone --testing https://github.com/republicus/multistreamer
+git clone --branch testing https://github.com/republicus/multistreamer
 
 mv multistreamer/* .
 rm -rf multistreamer/
