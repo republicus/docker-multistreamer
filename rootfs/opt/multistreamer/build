@@ -26,7 +26,7 @@ apk add --no-cache \
     unzip \
     dnsmasq \
     ffmpeg \
-    lua5.1 \
+    lua5.3 \
     pcre \
     libressl2.6-libssl \
     libressl2.6-libtls \
@@ -89,7 +89,7 @@ mv multistreamer/* .
 rm -rf multistreamer/
 
 /opt/luarocks/bin/luarocks --tree lua_modules install lua-resty-exec $LUA_LUA_RESTY_EXEC_VER
-/opt/luarocks/bin/luarocks --tree lua_modules install lua-resty-jit-uuid $LUA_LUA_RESTY_JIT_UUID_VER
+/opt/luarocks/bin/luarocks --tree lua_modules install lua-resty-jit-uuid
 /opt/luarocks/bin/luarocks --tree lua_modules install lua-resty-http $LUA_LUA_RESTY_HTTP_VER
 /opt/luarocks/bin/luarocks --tree lua_modules install lapis $LUA_LAPIS_VER
 /opt/luarocks/bin/luarocks --tree lua_modules install etlua $LUA_ETLUA_VER
