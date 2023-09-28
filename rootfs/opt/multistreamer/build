@@ -26,7 +26,7 @@ apk add --no-cache \
     unzip \
     dnsmasq \
     ffmpeg \
-    lua5.3 \
+    lua5.1 \
     pcre \
     libressl2.6-libssl \
     libressl2.6-libtls \
